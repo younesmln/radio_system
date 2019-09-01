@@ -15,10 +15,8 @@ ENV APP_HOME /app
 
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
-# COPY . /app
 
 EXPOSE 4000
 
-# RUN mix deps.get
 
-CMD mix ecto.create && mix ecto.migrate && mix phx.server
+CMD mix deps.get && mix ecto.create && mix ecto.migrate && mix phx.server

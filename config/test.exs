@@ -5,7 +5,7 @@ config :radio_system, RadioSystem.Repo,
   username: System.get_env("PG_USER"),
   password: System.get_env("PG_PASSWORD"),
   database: System.get_env("PG_TEST_DATABASE") || "radio_system_test",
-  hostname:  System.get_env("PG_HOST"),
+  hostname: System.get_env("PG_HOST"),
   port: System.get_env("PG_PORT"),
   pool: Ecto.Adapters.SQL.Sandbox
 

@@ -5,7 +5,7 @@ config :radio_system, RadioSystem.Repo,
   username: System.get_env("PG_USER"),
   password: System.get_env("PG_PASSWORD"),
   database: System.get_env("PG_DATABASE"),
-  hostname:  System.get_env("PG_HOST"),
+  hostname: System.get_env("PG_HOST"),
   port: System.get_env("PG_PORT"),
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -56,3 +56,5 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :mix_test_watch, clear: true
